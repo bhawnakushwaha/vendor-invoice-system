@@ -1,7 +1,8 @@
 # Vendor Invoice Intelligence System
-Freight cost prediction & Invoice risk flagging
+### Freight cost prediction & Invoice risk flagging
 
-### Project Overview
+---
+## Project Overview
 This project implements an end-to-end machine learning system designed to support finance teams by:
 
 - Predicting expected freight cost for vendor invoives.
@@ -9,31 +10,30 @@ This project implements an end-to-end machine learning system designed to suppor
 - Flagging high-risk invoices that require manual review due to abnormal cost, freight, or operational patterns.
 
 
-
-### Business Objective
+---
+## Business Objective
 1. Freight Cost Prediction (Regression)
-
 *Objective:* Predict the expected freight cost for a vendor invoice using quantity, invoice value, and historical behavior.
 
 - Freight is a non-trival component of landed cost
-
 - Poos freight estimation impacts margin analysis and budget.
-
 - Early prediction improves procrument planning and vendor negotiation.
+
+<img height="800" alt="Screenshot (394)" src="https://github.com/user-attachments/assets/25983c6a-c287-46a9-a55b-0c3f1f6e12bb" />
 
 
 2. Invoice Risk Flagging (Classification)
-
 *Objective:* Predict whether a vendor invoice should be flagged for manual approval due to abnormal cost, freight, or delivery patterns.
 
 - Manual invoice review does not scale.
-
 - Financial leakage often occurs in large or complex invoices.
-
 - Early risk detection improves audit effciency and operational control.
 
+<img  height="800" alt="Screenshot (395)" src="https://github.com/user-attachments/assets/89bc1599-ff5d-41dd-b3c4-dab360586cb1" />
 
-### Streamlit application
+
+---
+## Streamlit application
 
 The Streamlit application demonstrates the complete pipeline:
 
@@ -43,9 +43,8 @@ The Streamlit application demonstrates the complete pipeline:
 - Provide human-readable explanations
 
 
-### Project Structure 
-
-### 📁 Project Structure
+---
+## Project Structure 
 
 vendor-invoice-system/
 │
@@ -83,33 +82,29 @@ vendor-invoice-system/
 ├── app.py
 ├── README.md
 
-
-### Data Sources
+---
+## Data Sources
 Data stored in a relational SQLite database (inventory.db). 
 
 
+---
+## Model Used
 
-### Exploratory Data Analysis (EDA)
-Statistical tests (t-test) are used to confirm that flagges invoices differ meaningfully from normal invoives.
-
-
-### Model Used
-
-*Regression (Freight Prediction)*
+### *Regression (Freight Prediction)*
 
 - Linear Regression (baseline)
 - Decision Tree Regressor
 - Random Forest Regressor (final model)
 
-*Classification (Invoice Flagging)*
+### *Classification (Invoice Flagging)*
 
 - Logistic Regression (baseline)
 - Decision Tree Classifier
 - Random Forest Classifier (Final model with GridSearchCV)
 
 
-
-### Evaluation Metrics
+---
+## Evaluation Metrics
 
 #### Freight Prediction - 
 
@@ -123,8 +118,8 @@ Statistical tests (t-test) are used to confirm that flagges invoices differ mean
 - Precision, Recall, F1-Score
 - Classification  report
 
-
-### Run the Project
+---
+## Run the Project
 
 1. Clone the repository:
 
